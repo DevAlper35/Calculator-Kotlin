@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun topla(view: View){
-        if (binding.editSayi1.text.toString() != "" || binding.editSayi2.text.toString() != ""){
+        if (binding.editSayi1.text.toString() != "" && binding.editSayi2.text.toString() != ""){
             sayi1 = binding.editSayi1.text.toString().toInt()
             sayi2 = binding.editSayi2.text.toString().toInt()
             islem = "+"
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun cikart(view: View){
-        if (binding.editSayi1.text.toString() != "" || binding.editSayi2.text.toString() != ""){
+        if (binding.editSayi1.text.toString() != "" && binding.editSayi2.text.toString() != ""){
             sayi1 = binding.editSayi1.text.toString().toInt()
             sayi2 = binding.editSayi2.text.toString().toInt()
             islem = "-"
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun carp(view: View){
-        if (binding.editSayi1.text.toString() != "" || binding.editSayi2.text.toString() != ""){
+        if (binding.editSayi1.text.toString() != "" && binding.editSayi2.text.toString() != ""){
             sayi1 = binding.editSayi1.text.toString().toInt()
             sayi2 = binding.editSayi2.text.toString().toInt()
             islem = "X"
@@ -77,9 +77,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun bol(view: View){
-        if (binding.editSayi1.text.toString() == "" || binding.editSayi2.text.toString() == ""){
+        if (binding.editSayi1.text.toString() == "" && binding.editSayi2.text.toString() == ""){
             Toast.makeText(this,"Sayıları giriniz",Toast.LENGTH_SHORT).show()
-        }else if(binding.editSayi1.text.toString().toInt() == 0 ||binding.editSayi2.text.toString().toInt() == 0){
+        }else if(binding.editSayi1.text.toString().toInt() == 0 || binding.editSayi2.text.toString().toInt() == 0){
 
             Toast.makeText(this,"Bölmede SIFIR kullanamazsınız",Toast.LENGTH_SHORT).show()
         }
