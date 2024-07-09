@@ -11,14 +11,15 @@
         android:id="@+id/editSayi2"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
         android:ems="10"
         android:hint="Sayı Gir"
         android:inputType="number"
+        android:textAlignment="center"
         android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editSayi1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
         android:id="@+id/editSayi1"
@@ -29,34 +30,10 @@
         android:ems="10"
         android:hint="Sayı Gir"
         android:inputType="number"
+        android:textAlignment="center"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
-        android:id="@+id/btnCarp"
-        android:layout_width="60dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="32dp"
-        android:onClick="carp"
-        android:text="X"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/btnBol"
-        app:layout_constraintTop_toBottomOf="@+id/btnTopla" />
-
-    <Button
-        android:id="@+id/btnCikart"
-        android:layout_width="60dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="32dp"
-        android:onClick="cikart"
-        android:text="-"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnTopla" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -116,11 +93,52 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnTopla"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="topla"
+        android:text="+"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnCikart"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSayi1" />
+
+    <Button
+        android:id="@+id/btnCarp"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="carp"
+        android:text="X"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnBol"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTopla" />
+
+    <Button
+        android:id="@+id/btnCikart"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:onClick="cikart"
+        android:text="-"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnTopla"
+        app:layout_constraintTop_toTopOf="@+id/btnTopla" />
+
+    <Button
         android:id="@+id/btnBol"
         android:layout_width="60dp"
         android:layout_height="65dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="32dp"
         android:onClick="bol"
         android:text="/"
         android:textAlignment="center"
@@ -128,19 +146,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/btnCarp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCikart"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnTopla"
-        android:layout_width="60dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="32dp"
-        android:onClick="topla"
-        android:text="+"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/btnCikart"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCarp"
+        app:layout_constraintTop_toBottomOf="@+id/btnCikart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

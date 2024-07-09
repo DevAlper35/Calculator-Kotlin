@@ -81,7 +81,11 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"Sayıları giriniz",Toast.LENGTH_SHORT).show()
         }else if(binding.editSayi1.text.toString().toInt() == 0 || binding.editSayi2.text.toString().toInt() == 0){
 
-            Toast.makeText(this,"Bölmede SIFIR kullanamazsınız",Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this,"Bölmede SIFIR kullanamazsınız",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Bölmede SIFIR kullanan da...",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Ne bilim...",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Hesap Makinası kullanmasın ya",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Git abaküsle falan oyna !!!",Toast.LENGTH_SHORT).show()
         }
         else{
             sayi1 = binding.editSayi1.text.toString().toInt()
